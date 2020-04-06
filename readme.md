@@ -1,10 +1,10 @@
 
 A Restful API to query the mac address of vendors
 
-Tested with
+Tested
 * Docker 19.03.8
 * Java 8 or Java 11
-* Spring Boot 2.2.4.RELEASE
+* Spring Boot 2.2.4
 
 
 
@@ -19,7 +19,7 @@ Here is the exact command we will use –
 
 keytool -genkey -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
 
-Make sure the certificate is in the classpath
+copy the certitficate to source folder.
 
 ## Run instructions
 
@@ -33,9 +33,14 @@ $ java -jar target/macaddressapi-web.jar
 ## Docker instructions
 
 // create a docker image
-$ docker build -t macaddresslookupapi:1.0 .
+## $ docker build -t macaddresslookupapi:1.0 .
 // run it
-$ sudo docker run -p 8443:8443 macaddresslookupapi:1.0
+## $ sudo docker run -p 8443:8443 macaddresslookupapi:1.0
 
   access http://localhost:8443
+
+## To Test it
+Please generate a APIkey first from https://macaddress.io/.  The api expects address and apiKey as mandatory request parameter
+curl -k 'https://localhost:8443/getMacAddressVendorDetails?ip=*****&apiKey=***'
+
 ```
