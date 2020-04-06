@@ -8,7 +8,7 @@ Tested with
 
 
 
-##Create your own self signed SSL certificate
+## Create your own self signed SSL certificate
 To get SSL digital certificate for our application we have two options –
 
 to create a self-signed certificate
@@ -22,7 +22,7 @@ keytool -genkey -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 
 Make sure the certificate is in the classpath
 
 ## Run instructions
-```bash
+
 $ git clone 
 $ cd MacAddressAPI
 $ mvn clean install
