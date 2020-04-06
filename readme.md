@@ -28,7 +28,7 @@ $ cd MacAddressAPI
 $ mvn clean install
 $ java -jar target/macaddressapi-web.jar
 
-  access http://localhost:8443
+  
 
 ## Docker instructions
 
@@ -37,7 +37,7 @@ $ java -jar target/macaddressapi-web.jar
 // run it
 ## $ sudo docker run -p 8443:8443 macaddresslookupapi:1.0
 
-  access http://localhost:8443
+ 
 
 ## To Test it
 Please generate a APIkey first from https://macaddress.io/.  The api expects address and apiKey as mandatory request parameter
