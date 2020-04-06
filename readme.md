@@ -3,7 +3,7 @@ A Restful API to query the mac address of vendors
 
 Tested
 * Docker 19.03.8
-* Java 8 or Java 11
+* Java 8
 * Spring Boot 2.2.4
 
 
