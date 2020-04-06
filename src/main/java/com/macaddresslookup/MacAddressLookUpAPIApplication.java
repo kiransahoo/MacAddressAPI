@@ -34,13 +34,13 @@ public class MacAddressLookUpAPIApplication {
     @RequestMapping (value = "/getMacAddressVendorDetails", method = RequestMethod.GET,
             produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public String getMacAdressVendorDetails(@RequestParam(required = true) String ip,
-                                            @RequestParam(required = true) String apikey) {
+    public String getMacAdressVendorDetails(@RequestParam(required = true) String address,
+                                            @RequestParam(required = true) String apiKey) {
 
         JSONObject responsedata = new JSONObject();
         try {
             String baselookupmacvendorurl = configProp.getConfigValue("macvendorlookupurl");
-            String macvendordetailsAPiurl = baselookupmacvendorurl +"?output=json&search=" + ip + "&apiKey=" + apikey;
+            String macvendordetailsAPiurl = baselookupmacvendorurl +"?output=json&search=" + address + "&apiKey=" + apiKey;
             ResponseEntity<String> response = new RestTemplate().getForEntity(macvendordetailsAPiurl, String.class);
             Object obj = JSONValue.parse(response.getBody());
             JSONObject jsonObject = (JSONObject) obj;
