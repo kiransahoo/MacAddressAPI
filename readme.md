@@ -1,15 +1,14 @@
-## What is it?
-This source code provides a Restful API to query the mac address of vendirs
+
+A Restful API to query the mac address of vendors
 
 Tested with
-* Docker 19.03
-* Ubuntu 19
+* Docker 19.03.8
 * Java 8 or Java 11
 * Spring Boot 2.2.4.RELEASE
-* Maven
 
 
-Create your own self signed SSL certificate
+
+##Create your own self signed SSL certificate
 To get SSL digital certificate for our application we have two options –
 
 to create a self-signed certificate
@@ -22,21 +21,21 @@ keytool -genkey -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 
 
 Make sure the certificate is in the classpath
 
-## How to run this?
+## Run instructions
 ```bash
 $ git clone 
-$ cd docker-spring-boot
-$ mvn clean package
-$ java -jar target/spring-boot-web.jar
+$ cd MacAddressAPI
+$ mvn clean install
+$ java -jar target/macaddressapi-web.jar
 
-  access http://localhost:8080
+  access http://localhost:8443
 
-//dockerize
+## Docker instructions
 
 // create a docker image
 $ docker build -t macaddresslookupapi:1.0 .
 // run it
 $ sudo docker run -p 8443:8443 macaddresslookupapi:1.0
 
-  access http://localhost:8080
+  access http://localhost:8443
 ```
