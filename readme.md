@@ -41,6 +41,6 @@ $ java -jar target/macaddressapi-web.jar
 
 ## To Test it
 Please generate a APIkey first from https://macaddress.io/.  The api expects address and apiKey as mandatory request parameter
-curl -k 'https://localhost:8443/getMacAddressVendorDetails?ip=*****&apiKey=***'
+curl -k 'https://localhost:8443/getMacAddressVendorDetails?address=*****&apiKey=***'
 
 ```
