@@ -19,7 +19,7 @@ Here is the exact command we will use –
 
 keytool -genkey -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 -validity 700 -keypass changeit -storepass changeit -keystore ssl-server.jks
 
-copy the certitficate to source folder.
+copy the certitficate to src folder after checking out the source code from git.
 
 ## Run instructions
 
