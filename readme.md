@@ -21,16 +21,16 @@ keytool -genkey -alias selfsigned_localhost_sslserver -keyalg RSA -keysize 2048 
 
 copy the certitficate to src folder after checking out the source code from git.
 
-## Run instructions
+## Build instructions
 
-$ git clone 
-$ cd MacAddressAPI
-$ mvn clean install
-$ java -jar target/macaddressapi-web.jar
+* git clone 
+* cd MacAddressAPI
+* mvn clean install
+
 
   
 
-## Docker instructions
+## Docker instructions For Building Docker Image and Running the App
 
 // create a docker image
 ## $ docker build -t macaddresslookupapi:1.0 .
